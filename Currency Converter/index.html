@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="dispaly-4 text-center mb-3">Currency Converter</h1>
+                <form>
+                    <div class="form-group">
+                        <input id="nairaInput" type="number" class="form-control form-control-lg" placeholder="Enter Naira amout ...." oninput="currencyConverter(this.value)" onchange="currencyConverter(this.value)">
+                    </div>
+                </form>
+                <div id="output">
+                    <div class="card bg-primary mb-2">
+                        <div class="card-block">
+                            <h4>Euro:</h4>
+                            <div id="euroOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card bg-success mb-2">
+                        <div class="card-block">
+                            <h4>US Dollar:</h4>
+                            <div id="usOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card bg-danger mb-2">
+                        <div class="card-block">
+                            <h4>British Pound:</h4>
+                            <div id="poundOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card bg-warning mb-2">
+                        <div class="card-block">
+                            <h4>Japanese Yen:</h4>
+                            <div id="yenOutput"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <form name="converter">
+        <table border="0">
+            <tr>
+                <td>Euro: </td><td><input type="number" name="euro" onChange="euroConverter()" /></td>
+            </tr>
+            <tr>
+                <td>US Dollar: </td><td><input type="number" name="dollar" onChange="dollarConverter()" /></td>
+            </tr>
+            <tr>
+                <td>British Pound:</td><td><input type="number" name="pound" onChange="poundConverter()" /></td>
+            </tr>
+            <tr>
+                <td>Japanese Yen: </td><td><input type="number" name="yen" onChange="yenConverter()" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="number" value="Convert!" /></td>
+            </tr>
+        </table>
+    </form> -->
+    <script>
+        document.getElementById('output').style.visibility = 'hidden';
+        document.getElementById('nairaInput').addEventListener('input', function(e){
+        document.getElementById('output').style.visibility = 'visible';
+        let naira = e.target.value;
+        document.getElementById('euroOutput').innerHTML = naira*0.0025;
+        document.getElementById('usOutput').innerHTML = naira*0.0028;
+        document.getElementById('poundOutput').innerHTML = naira*0.0022;
+        document.getElementById('yenOutput').innerHTML = naira*0.3;
+        });
+    </script>    
+</body>
+</html>
