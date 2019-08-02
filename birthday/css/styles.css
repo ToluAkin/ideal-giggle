@@ -1,0 +1,9 @@
+body {
+    background-color: #85cff7;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    margin-top: 100px;
+}
+
+.two, .three, .four, .five {
+    display: none;
+}
