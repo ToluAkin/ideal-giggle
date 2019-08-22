@@ -1,0 +1,53 @@
+body{
+    background: url("https://i.pinimg.com/originals/03/61/6e/03616e44353f082e6cf8ff85c4ae04db.jpg");
+      background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  h1 {
+    text-align: center;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    padding: 10px 5px;
+    font-size: 1.2em;
+  }
+  
+  li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+  }
+  
+  .tabs {
+    text-align: center;
+    margin-top: 120px ;
+  }
+  
+  .vinyls {
+    text-align: center;
+    margin: 0px auto;
+    padding: 0px;
+    width: 100%;
+    list-style: none;
+  }
+  
+  .item {
+    display: inline-block;
+    vertical-align: top;
+    background-color: grey;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    padding: 20px 20px;
+    text-align: center;
+    margin: 10px;
+    color: pink;
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto 0px auto;
+  }
