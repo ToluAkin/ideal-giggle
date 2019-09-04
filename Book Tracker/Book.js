@@ -7,18 +7,18 @@ class Book {
         this.pages = pages;
         this.description = description;
         this.currentPage = 1;
-        this.read = true or false;
+        this.read = false;
     }
 
-    readBook (currentPage) {
-        if (currentPage > pages) {
-            console.log('This is the default value');
+    readBook(page) {
+        if (page <= 0 || page > this.pages) {
+          alert('Incorrect number of pages!');
         } else {
-            console.log(bookList.currentPage);
-        } 
-        if (currentPage == pages) {
-            return this.read == true; 
-        } 
+          this.currentPage = page;
+          if (page == this.pages) {
+            this.read = true;
+            }
+        }    
     }
 }
 
